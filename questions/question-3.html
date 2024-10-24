@@ -12,10 +12,13 @@
         <p>Qual dessas expressões cria uma lista em Python?</p>
         <h2>Alternativas:</h2>
 
-        <button class="option" onclick="checkAnswer(3, 'a')"><pre>lista = {1, 2, 3, 4}</pre></button>
-        <button class="option" onclick="checkAnswer(3, 'b')"><pre>lista = (1, 2, 3, 4)</pre></button>
-        <button class="option" onclick="checkAnswer(3, 'c')"><pre>lista = [1, 2, 3, 4]</pre></button>
-        <button class="option" onclick="checkAnswer(3, 'd')"><pre>lista = &lt;1, 2, 3, 4&gt;</pre></button3
+        <button class="option" id="a" onclick="selectOption('a')"><pre>lista = {1, 2, 3, 4}</pre></button>
+        <button class="option" id="b" onclick="selectOption('b')"><pre>lista = (1, 2, 3, 4)</pre></button>
+        <button class="option" id="c" onclick="selectOption('c')"><pre>lista = [1, 2, 3, 4]</pre></button>
+        <button class="option" id="d" onclick="selectOption('d')"><pre>lista = &lt;1, 2, 3, 4&gt;</pre></button>
+
+        <button id="confirm" onclick="checkAnswer(1)" disabled>Confirmar</button>
+        <button id="next" onclick="next('question-4.html')">Continuar</button>
     </div>
 </body>
 <script src="../script/quiz.js"></script>

@@ -1,13 +1,34 @@
-function startQuiz() {
-    window.location.href = "../questions/question-1.html"
+const totalQuestions = 5
+const result = document.getElementById('result')
+let selectedAnswer = null
+let confirmedAnswer = false
+
+function selectOption(option) {
+    selectedAnswer = option
+    confirmedAnswer = false
+
+    document.getElementById("confirm").disabled = false
+
+    document.getElementById("a").style.backgroundColor = "#4caf50"
+    document.getElementById("b").style.backgroundColor = "#4caf50"
+    document.getElementById("c").style.backgroundColor = "#4caf50"
+    document.getElementById("d").style.backgroundColor = "#4caf50"
+
+    document.getElementById(option).style.backgroundColor = "#1e88e5"
 }
 
-function checkAnswer(question, option) {
+function checkAnswer(question) {
+    if (selectedAnswer) {
+        confirmedAnswer = true
+        document.getElementById("confirm").disabled = true;
+        document.getElementById("next").style.display = "inline-block"
+    }
+
     switch(question) {
         case 1:
-            if (option == 'b') {
+            if (selectedAnswer == 'b') {
                 alert("Correto!")
-                window.location.href = "./question-2.html"
+                addPoint()
             }
             else {
                 alert("Incorreto! Tente novamente!")
@@ -15,9 +36,9 @@ function checkAnswer(question, option) {
 
             break
         case 2:
-            if (option == 'c') {
+            if (selectedAnswer == 'c') {
                 alert("Correto!")
-                window.location.href = "./question-3.html"
+                addPoint()
             }
             else {
                 alert("Incorreto! Tente novamente!")
@@ -25,9 +46,9 @@ function checkAnswer(question, option) {
 
             break
         case 3:
-            if (option == 'c') {
+            if (selectedAnswer == 'c') {
                 alert("Correto!")
-                window.location.href = "./question-4.html"
+                addPoint()
             }
             else {
                 alert("Incorreto! Tente novamente!")
@@ -35,9 +56,9 @@ function checkAnswer(question, option) {
 
             break
         case 4:
-            if (option == 'a') {
+            if (selectedAnswer == 'a') {
                 alert("Correto!")
-                window.location.href = "./question-5.html"
+                addPoint()
             }
             else {
                 alert("Incorreto! Tente novamente!")
@@ -45,9 +66,9 @@ function checkAnswer(question, option) {
 
             break
         case 5:
-            if (option == 'd') {
+            if (selectedAnswer == 'd') {
                 alert("Correto!")
-                window.location.href = "../index.html"
+                addPoint()
             }
             else {
                 alert("Incorreto! Tente novamente!")
@@ -56,3 +77,25 @@ function checkAnswer(question, option) {
             break
     }
 }
+
+function addPoint() {
+    let points = localStorage.getItem("points") || 0
+    points++
+    localStorage.setItem("points", points)
+}
+
+function next(nextQuestion) {
+    if (confirmedAnswer) {
+        window.location.href = nextQuestion
+    }
+    else {
+        alert("Por favor, confirme sua escolha antes de continuar.")
+    }
+}
+
+function restartQuiz() {
+    localStorage.setItem("points", 0)
+}
+
+let points = localStorage.getItem("points") || 0
+result.innerText = points + "/" + totalQuestions

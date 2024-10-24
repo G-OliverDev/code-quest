@@ -12,10 +12,13 @@
         <p>Qual a saída do seguinte código em Python?</p>
         <pre>print(2 + 3 * 4)</pre>
         <h2 class="question">Alternativas:</h2>
-        <button class="option" onclick="checkAnswer(1, 'a')">20</button>
-        <button class="option" onclick="checkAnswer(1, 'b')">14</button>
-        <button class="option" onclick="checkAnswer(1, 'c')">24</button>
-        <button class="option" onclick="checkAnswer(1, 'd')">11</button>
+        <button class="option" id="a" onclick="selectOption('a')">20</button>
+        <button class="option" id="b" onclick="selectOption('b')">14</button>
+        <button class="option" id="c" onclick="selectOption('c')">24</button>
+        <button class="option" id="d" onclick="selectOption('d')">11</button>
+
+        <button id="confirm" onclick="checkAnswer(1)" disabled>Confirmar</button>
+        <button id="next" onclick="next('question-2.html')">Continuar</button>
     </div>
 </body>
 <script src="../script/quiz.js"></script>
