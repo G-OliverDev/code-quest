@@ -12,12 +12,13 @@
         <p>Qual é o resultado da seguinte operação lógica?</p>
         <pre>print(5 > 3 and 2 < 1)</pre>
         <h2 class="question">Alternativas:</h2>
-        <button class="option" onclick="checkAnswer(5, 'a')">True</button>
-        <button class="option" onclick="checkAnswer(5, 'b')">None</button>
-        <button class="option" onclick="checkAnswer(5, 'c')">Error</button>
-        <button class="option" onclick="checkAnswer(5, 'd')">False</button>
+        <button class="option" id="a" onclick="selectOption('a')">True</button>
+        <button class="option" id="b" onclick="selectOption('b')">None</button>
+        <button class="option" id="c" onclick="selectOption('c')">Error</button>
+        <button class="option" id="d" onclick="selectOption('d')">False</button>
 
-        <a href="../result.html"><button>Continuar</button></a>
+        <button id="confirm" onclick="checkAnswer(5)" disabled>Confirmar</button>
+        <button id="next" onclick="next('../result.html')">Continuar</button>
     </div>
 </body>
 <script src="../script/quiz.js"></script>

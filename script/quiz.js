@@ -9,12 +9,12 @@ function selectOption(option) {
 
     document.getElementById("confirm").disabled = false
 
-    document.getElementById("a").style.backgroundColor = "#4caf50"
-    document.getElementById("b").style.backgroundColor = "#4caf50"
-    document.getElementById("c").style.backgroundColor = "#4caf50"
-    document.getElementById("d").style.backgroundColor = "#4caf50"
+    document.getElementById("a").style.backgroundColor = "#0077b6"
+    document.getElementById("b").style.backgroundColor = "#0077b6"
+    document.getElementById("c").style.backgroundColor = "#0077b6"
+    document.getElementById("d").style.backgroundColor = "#0077b6"
 
-    document.getElementById(option).style.backgroundColor = "#1e88e5"
+    document.getElementById(option).style.backgroundColor = "#1d3557"
 }
 
 function checkAnswer(question) {
@@ -22,6 +22,11 @@ function checkAnswer(question) {
         confirmedAnswer = true
         document.getElementById("confirm").disabled = true;
         document.getElementById("next").style.display = "inline-block"
+
+        document.getElementById("a").disabled = true
+        document.getElementById("b").disabled = true
+        document.getElementById("c").disabled = true
+        document.getElementById("d").disabled = true
     }
 
     switch(question) {
@@ -95,6 +100,7 @@ function next(nextQuestion) {
 
 function restartQuiz() {
     localStorage.setItem("points", 0)
+    window.location.href = 'index.html'
 }
 
 let points = localStorage.getItem("points") || 0
