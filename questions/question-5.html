@@ -13,9 +13,24 @@
         <pre>print(5 > 3 and 2 < 1)</pre>
         <h2 class="question">Alternativas:</h2>
         <button class="option" id="a" onclick="selectOption('a')">True</button>
+        <div class="wrong hidden" id="a_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="b" onclick="selectOption('b')">None</button>
+        <div class="wrong hidden" id="b_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="c" onclick="selectOption('c')">Error</button>
+        <div class="wrong hidden" id="c_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="d" onclick="selectOption('d')">False</button>
+        <div class="hidden" id="correct">
+            &#9989; Resposta correta
+            <hr>
+            Explicação:
+            <p>A primeira parte da expressão (5 > 3) é True, mas a segunda parte (2 < 1) é False. Como o operador and requer que ambas as expressões sejam verdadeiras, o resultado final é False.</p>
+        </div>
 
         <button id="confirm" onclick="checkAnswer(5)" disabled>Confirmar</button>
         <button id="next" onclick="next('../result.html')">Continuar</button>

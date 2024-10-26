@@ -17,9 +17,24 @@ for i in range(3):
         <h2>Alternativas:</h2>
 
         <button class="option" id="a" onclick="selectOption('a')">0, 1, 2</button>
+        <div class="hidden" id="correct">
+            &#9989; Resposta correta
+            <hr>
+            Explicação:
+            <p>A função range(3) gera uma sequência de números de 0 até 2 (não incluindo o 3), portanto o loop for imprime os valores 0, 1 e 2.</p>
+        </div>
         <button class="option" id="b" onclick="selectOption('b')">1, 2, 3</button>
+        <div class="wrong hidden" id="b_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="c" onclick="selectOption('c')">0, 1, 2, 3</button>
+        <div class="wrong hidden" id="c_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="d" onclick="selectOption('d')">1, 2</button>
+        <div class="wrong hidden" id="d_wrong">
+            &#10060; Incorreto
+        </div>
 
         <button id="confirm" onclick="checkAnswer(4)" disabled>Confirmar</button>
         <button id="next" onclick="next('question-5.html')">Continuar</button>

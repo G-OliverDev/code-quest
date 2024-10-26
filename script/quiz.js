@@ -32,55 +32,108 @@ function checkAnswer(question) {
     switch(question) {
         case 1:
             if (selectedAnswer == 'b') {
-                alert("Correto!")
                 addPoint()
             }
             else {
-                alert("Incorreto! Tente novamente!")
+                if (selectedAnswer == 'a') {
+                    document.getElementById("a_wrong").classList.remove("hidden")
+                    document.getElementById("a_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'c') {
+                    document.getElementById("c_wrong").classList.remove("hidden")
+                    document.getElementById("c_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'd') {
+                    document.getElementById("d_wrong").classList.remove("hidden")
+                    document.getElementById("d_wrong").classList.add("fade-in")
+                }
             }
 
             break
         case 2:
             if (selectedAnswer == 'c') {
-                alert("Correto!")
                 addPoint()
             }
             else {
-                alert("Incorreto! Tente novamente!")
+                if (selectedAnswer == 'a') {
+                    document.getElementById("a_wrong").classList.remove("hidden")
+                    document.getElementById("a_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'b') {
+                    document.getElementById("b_wrong").classList.remove("hidden")
+                    document.getElementById("b_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'd') {
+                    document.getElementById("d_wrong").classList.remove("hidden")
+                    document.getElementById("d_wrong").classList.add("fade-in")
+                }
             }
 
             break
         case 3:
             if (selectedAnswer == 'c') {
-                alert("Correto!")
                 addPoint()
             }
             else {
-                alert("Incorreto! Tente novamente!")
+                if (selectedAnswer == 'a') {
+                    document.getElementById("a_wrong").classList.remove("hidden")
+                    document.getElementById("a_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'b') {
+                    document.getElementById("b_wrong").classList.remove("hidden")
+                    document.getElementById("b_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'd') {
+                    document.getElementById("d_wrong").classList.remove("hidden")
+                    document.getElementById("d_wrong").classList.add("fade-in")
+                }
             }
 
             break
         case 4:
             if (selectedAnswer == 'a') {
-                alert("Correto!")
                 addPoint()
             }
             else {
-                alert("Incorreto! Tente novamente!")
+                if (selectedAnswer == 'b') {
+                    document.getElementById("b_wrong").classList.remove("hidden")
+                    document.getElementById("b_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'c') {
+                    document.getElementById("c_wrong").classList.remove("hidden")
+                    document.getElementById("c_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'd') {
+                    document.getElementById("d_wrong").classList.remove("hidden")
+                    document.getElementById("d_wrong").classList.add("fade-in")
+                }
             }
 
             break
         case 5:
             if (selectedAnswer == 'd') {
-                alert("Correto!")
                 addPoint()
             }
             else {
-                alert("Incorreto! Tente novamente!")
+                if (selectedAnswer == 'a') {
+                    document.getElementById("a_wrong").classList.remove("hidden")
+                    document.getElementById("a_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'b') {
+                    document.getElementById("b_wrong").classList.remove("hidden")
+                    document.getElementById("b_wrong").classList.add("fade-in")
+                }
+                else if (selectedAnswer == 'c') {
+                    document.getElementById("c_wrong").classList.remove("hidden")
+                    document.getElementById("c_wrong").classList.add("fade-in")
+                }
             }
 
             break
     }
+
+    document.getElementById("correct").classList.remove("hidden")
+    document.getElementById("correct").classList.add("fade-in")
 }
 
 function addPoint() {

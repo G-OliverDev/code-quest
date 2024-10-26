@@ -38,29 +38,68 @@ pre {
     text-align: left;
 }
 
-button.option > pre {
-    background-color: transparent;
-}
-
 h2.question {
     font-size: 24px;
     color: #555;
 }
 
-#result {
-    font-size: 48px;
-    color: #0077b6;
-    font-weight: bold;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #dee2e6;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-#result:hover {
-    transform: scale(1.05);
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.wrong {
+    border: 1px solid #d32f2f;
+    border-radius: 8px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: #d32f2f;
+    padding: 15px;
+    background-color: #FCEEEE;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#correct {
+    border: 1px solid #4caf50;
+    border-radius: 8px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: #43a047;
+    padding: 15px;
+    background-color: #E2F3E3;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#correct > hr {
+    color: #4caf50;
+    background-color: #4caf50;
+    height: 1px;
+    border: none;
+}
+
+#correct > p {
+    font-size: 18px;
 }
 
 button {
@@ -112,6 +151,10 @@ button:active::after {
     transform: scaleX(1);
 }
 
+button.option > pre {
+    background-color: transparent;
+}
+
 #confirm {
     background-color: #6a4c93;
 }
@@ -145,4 +188,20 @@ button:active::after {
     background-color: #457b9d;
     transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#result {
+    font-size: 48px;
+    color: #0077b6;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #dee2e6;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#result:hover {
+    transform: scale(1.05);
 }

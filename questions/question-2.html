@@ -14,10 +14,24 @@
         <h2>Alternativas:</h2>
 
         <button class="option" id="a" onclick="selectOption('a')">int</button>
+        <div class="wrong hidden" id="a_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="b" onclick="selectOption('b')">str</button>
+        <div class="wrong hidden" id="b_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="c" onclick="selectOption('c')">float</button>
+        <div class="hidden" id="correct">
+            &#9989; Resposta correta
+            <hr>
+            Explicação:
+            <p>Em Python, números decimais são do tipo float.</p>
+        </div>
         <button class="option" id="d" onclick="selectOption('d')">bool</button>
-
+        <div class="wrong hidden" id="d_wrong">
+            &#10060; Incorreto
+        </div>
         <button id="confirm" onclick="checkAnswer(2)" disabled>Confirmar</button>
         <button id="next" onclick="next('question-3.html')">Continuar</button>
     </div>

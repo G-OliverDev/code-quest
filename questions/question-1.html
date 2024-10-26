@@ -13,9 +13,24 @@
         <pre>print(2 + 3 * 4)</pre>
         <h2 class="question">Alternativas:</h2>
         <button class="option" id="a" onclick="selectOption('a')">20</button>
+        <div class="wrong hidden" id="a_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="b" onclick="selectOption('b')">14</button>
+        <div class="hidden" id="correct">
+            &#9989; Resposta correta
+            <hr>
+            Explicação:
+            <p>Em Python, as operações seguem a ordem de precedência. Primeiro é feita a multiplicação (3 * 4 = 12) e depois a soma (2 + 12 = 14).</p>
+        </div>
         <button class="option" id="c" onclick="selectOption('c')">24</button>
+        <div class="wrong hidden" id="c_wrong">
+            &#10060; Incorreto
+        </div>
         <button class="option" id="d" onclick="selectOption('d')">11</button>
+        <div class="wrong hidden" id="d_wrong">
+            &#10060; Incorreto
+        </div>
 
         <button id="confirm" onclick="checkAnswer(1)" disabled>Confirmar</button>
         <button id="next" onclick="next('question-2.html')">Continuar</button>
